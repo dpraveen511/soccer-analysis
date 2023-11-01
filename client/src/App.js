@@ -1,33 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Pie } from 'react-chartjs-2';
 
 function App() {
     return (
         <Router>
             <div className="container mt-5">
                 <header className="text-center mb-5">
-                    <h1>FootGame</h1>
+                    <h1>Foot Game</h1>
                 </header>
-
-                {/* <nav>
-                    <ul className="nav justify-content-center mb-4">
-                        <li className="nav-item">
-                            <Link to="/" className="nav-link">Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/general-stats" className="nav-link">General Stats</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/trend-queries" className="nav-link">Trend Queries</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/sql-editor" className="nav-link">SQL Editor</Link>
-                        </li>
-                    </ul>
-                </nav>
- */}
-                <Routes>
+            <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/general-stats" element={<GeneralStatsPage />} />
                     <Route path="/trend-queries" element={<TrendQueriesPage />} />
@@ -73,9 +56,11 @@ function HomePage() {
     );
 }
 
+
 function GeneralStatsPage() {
-    return <div>General Stats Content Here</div>;
+    return <div>General Statistics Content Here</div>;
 }
+
 
 function TrendQueriesPage() {
     return (
